@@ -9,7 +9,7 @@ interface ProjectMetadataProps{
 
 }
 
-const ProjectMetadata = ({type, year, medium, details} ) => {
+const ProjectMetadata:React.FC<ProjectMetadataProps> = ({type, year, medium, details} ) => {
   return (
     <section className={styles.projectMetadataWrapper}>
       <div className={styles.projectMetadataContainer}>

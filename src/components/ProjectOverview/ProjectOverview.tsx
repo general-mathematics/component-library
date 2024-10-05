@@ -5,7 +5,7 @@ interface ProjectOverviewProps {
 
 }
 
-const ProjectOverview = ({children}) => {
+const ProjectOverview:React.FC<ProjectOverviewProps> = ({children}) => {
   return ( 
     <section className={styles.projectOverviewWrapper}>
       <div className={styles.projectOverviewContainer}>
