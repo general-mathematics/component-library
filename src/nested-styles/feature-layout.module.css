@@ -1,0 +1,20 @@
+/* Mobile View */
+
+.featureMain {
+  width: 100%;
+  margin: 0rem auto;
+  flex: 1;
+  /* This flex-grow is to ensure the footer stays stuck to the bottom. Main does not need to be display flex for this and does not need to be so. */
+  /* border: 1px solid pink; */
+}
+
+
+/* Desktop MQ */
+@media (min-width: 768px) {
+  .featureArticle {
+    width: 60ch;
+    margin: 0 auto;
+    /* border: 1px solid green; */
+    flex: 1;
+  }
+}

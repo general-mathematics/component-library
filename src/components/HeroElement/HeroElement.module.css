@@ -1,0 +1,44 @@
+/* HeroElement.module.css */
+
+.heroWrapper {
+  grid-area: heroWrapper;
+  grid-auto-flow: column;
+  overflow: hidden;
+}
+
+.heroContainer {
+  grid-area: heroContainer;
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background-color:#3498db;
+  font-size: 2rem;
+  overflow: hidden;
+  align-content: center;
+  justify-content: center;
+}
+
+.largeHeading {
+  text-align: center;
+  font-size: 2rem;
+}
+
+/* DESKTOP VIEW AND DESKTOP STYLES */
+@media (min-width: 768px) {
+.heroWrapper{
+  grid-area: heroWrapper;
+  grid-auto-flow: column;
+  overflow: hidden;
+}
+
+.heroContainer {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  max-height: 100vh;
+  width: 100vw;
+  }
+
+  .largeHeading {
+    font-size: 4rem;
+
+  }
+}

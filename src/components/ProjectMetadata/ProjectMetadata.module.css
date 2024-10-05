@@ -1,0 +1,25 @@
+.projectMetadataWrapper{
+  grid-area: projectMetadata;
+  grid-auto-flow: row;
+}
+
+.projectMetadataContainer {
+  white-space: no-wrap;
+}
+.projectMetadataContainer p{
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  font-size:0.875rem;
+}
+.data{
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  font-size: 0.875rem;
+}
+
+
+@media (min-width: 768px) {
+  .projectMetadataWrapper{
+    grid-auto-flow: column;
+  }
+}

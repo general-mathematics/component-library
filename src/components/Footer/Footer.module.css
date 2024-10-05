@@ -1,0 +1,31 @@
+.footer {
+  display: flex;
+  padding: 1rem 0rem;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-top: 0.5px solid lightgrey;
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+
+.copyright{
+  order: 1;
+}
+
+.email {
+  margin-bottom: 0.25rem;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+    /* Side-by-side on larger screens */
+    justify-content: space-between;
+    /* Spread items horizontally */
+    align-items: center;
+    /* Vertically align the items */
+  }
+}

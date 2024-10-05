@@ -1,0 +1,15 @@
+.projectOverviewWrapper{
+  grid-area: projectOverview;
+  
+}
+
+
+
+
+@media (min-width: 768px) {
+  .projectOverviewWrapper{
+      grid-area: projectOverview;
+      width: 60ch;
+      margin: 0 auto 0 0;
+  }
+}

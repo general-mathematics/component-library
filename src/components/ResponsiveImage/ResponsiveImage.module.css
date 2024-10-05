@@ -1,0 +1,39 @@
+.container {
+  width: auto;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0px;
+}
+
+.containerFullBleed {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  position: relative;
+}
+
+.containerSlightBleed {
+  margin-left: -3rem;
+  margin-right: -3rem;
+}
+
+.containerFullBleedMobile {
+  /* Default non-full-bleed behavior for larger screens */
+  width: auto;
+  margin: 0 auto;
+
+  /* Mobile-specific full-bleed */
+  @media (max-width: 800px) {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    position: relative;
+  }
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+  padding: 0rem 0rem 2rem 0rem;
+}

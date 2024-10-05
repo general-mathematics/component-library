@@ -1,0 +1,46 @@
+.header{
+  height: 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  /* Ensure it stays above other content */
+  background-color: #ffffff;
+  width: 100%;
+  border-bottom: 1px solid rgb(243, 235, 235);
+}
+
+.headerContainer {
+  top:0;
+  width: 90%;
+  margin: 0 auto;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.90rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  background-color: #ffffff;
+}
+.headerLink{
+  color:black;
+  font-weight: 400;
+}
+
+.headerLink {
+  color: black;
+}
+.headerLink:hover{
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,34 @@
+.projectMain {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "heroWrapper"
+    "projectOverview"
+    "projectMetadata";
+}
+
+@media (min-width: 768px) {
+  .projectMain {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-flow: column;
+    grid-gap: 1.5rem;
+    grid-template-areas:
+      "heroWrapper heroWrapper heroWrapper heroWrapper"
+      "projectOverview projectOverview projectMetadata ."
+  }
+}
+
+@media (min-width: 1024px) {
+  .projectMain {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-flow: column;
+    grid-gap: 1.5rem;
+    grid-template-areas:
+      "heroWrapper heroWrapper heroWrapper heroWrapper"
+      "projectOverview projectOverview . projectMetadata"
+  }
+}
