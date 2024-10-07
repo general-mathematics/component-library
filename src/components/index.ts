@@ -2,7 +2,7 @@
 
 export { default as Betadata } from './Betadata/Betadata';
 export { default as Card } from './Card/Card';
-export { default as DotsHome } from './DotsHome/DotsHome'
+export { default as Homepage } from './Homepage/Homepage';
 export { default as Footer } from './Footer/Footer';
 export { default as Header } from './Header/Header';
 export { default as HeroElement } from './HeroElement/HeroElement';

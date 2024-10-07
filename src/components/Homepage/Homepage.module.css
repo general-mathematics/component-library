@@ -1,34 +1,27 @@
-/* DotsHome.module.css */
 
 .container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* Space out elements vertically */
   height: 100vh;
   /* Full viewport height */
-  padding: 20px;
-  /* Padding around the content */
   box-sizing: border-box;
   /* Include padding in height calculation */
-  background-color: hsl(0, 50%, 30%)
 }
 
 .title {
   margin: 0;
   /* Remove default margin */
-  padding: 20px 0;
+  padding: 40px;
   /* Add padding for spacing */
   font-size: 2.5rem;
   /* Font size for the heading */
-  color:hsl(0, 90%, 100%);
-  /* Color for the heading */
 }
 
 .buttonContainer {
   margin-top: auto;
   /* Pushes the button to the bottom */
-  padding: 20px 0;
+  padding: 40px;
   /* Add padding for spacing */
   display: flex;
   justify-content: flex-end;

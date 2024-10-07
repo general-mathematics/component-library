@@ -24,18 +24,23 @@
   letter-spacing: 0.02em;
   background-color: #ffffff;
 }
-.headerLink{
+.headerContainer a{
   color:black;
-  font-weight: 400;
-}
-
-.headerLink {
-  color: black;
-}
-.headerLink:hover{
+  font-weight: 500;
   text-decoration: none;
 }
 
+.headerContainer a:hover{
+  text-decoration: none;
+}
+a.rightLink {
+  color: var(--body-text-color);
+  font-weight: 400;
+}
+
+a.rightLink:hover{
+  color: var(--grey-l);
+}
 
 
 

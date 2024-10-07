@@ -5,26 +5,33 @@
 }
 
 :root {
-    --primary-color: #3498db;
-    --secondary-color: #2ecc71;
-    --browser-background-color: #ffffff;
-    --font-family: 'IBM Plex Sans', sans-serif;
-    --hover-color: rgba(0, 112, 243, 0.2);
-    --body-text-color: rgb(65, 64, 66);
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --browser-background-color: #ffffff;
+  --font-family: 'IBM Plex Sans', sans-serif;
+  --body-text-color: rgb(65, 64, 66);
+  --base-link-color: #1E90FF;
 
-    /* Media Queries */ 
-    --breakpoint-mobile: 375px;
-    --breakpoint-tablet: 768px;
-    --breakpoint-desktop: 1024px;
+  /* Greys */
+  --grey-xs: #f7f7f7;  /* Very light grey */
+  --grey-sm: #e0e0e0;  /* Light grey */
+  --grey-md: #b3b3b3;  /* Medium grey */
+  --grey-lg: #7d7d7d;  /* Dark grey */
+  --grey-xl: #4d4d4d;  /* Very dark grey */
 
-    /* Spacing */
-    --space-xxs: 0.125rem;  /* 2px */
-    --space-xs: 0.25rem;    /* 4px */
-    --space-sm: 0.5rem;     /* 8px */
-    --space-md: 1rem;       /* 16px */
-    --space-lg: 1.5rem;     /* 24px */
-    --space-xl: 2rem;       /* 32px */
-    --space-xxl: 3rem;      /* 48px */
+  /* Media Queries */ 
+  --breakpoint-mobile: 375px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1024px;
+
+  /* Spacing */
+  --space-xxs: 0.125rem;  /* 2px */
+  --space-xs: 0.25rem;    /* 4px */
+  --space-sm: 0.5rem;     /* 8px */
+  --space-md: 1rem;       /* 16px */
+  --space-lg: 1.5rem;     /* 24px */
+  --space-xl: 2rem;       /* 32px */
+  --space-xxl: 3rem;      /* 48px */
 }
 
 html {
@@ -139,12 +146,13 @@ p {
 /* Links */
 
 a {
-    text-decoration: none;
+    color: #1E90FF;
+    text-decoration: underline;
 }
 
 a:hover {
-    color: darkblue;
-    text-decoration: underline;
+    color: #1E90FF;
+    text-decoration: none;
 }
 
 /* Utility Classes */

@@ -1,0 +1,9 @@
+{
+  "watch": [
+    "src/components/**/*.module.css",
+    "src/styles/**/*.css"
+  ],
+  "exec": "node copy-css.js",
+  "ext": "css",
+  "legacyWatch": true
+}

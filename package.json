@@ -4,23 +4,26 @@
   "description": "Just some basic UI components for our projects.",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc && node copy-css.js", 
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/general-mathematics/component-library.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/general-mathematics/component-library/issues"
-  },
-  "homepage": "https://github.com/general-mathematics/component-library#readme",
-  "devDependencies": {
-    "@types/react": "^18.3.11",
-    "@types/react-dom": "^18.3.0",
-    "react": "^18.3.1",
-    "typescript": "^5.6.2"
+    "build": "tsc && node copy-css.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "concurrently \"tsc --watch\" \"nodemon\""},
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/general-mathematics/component-library.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/general-mathematics/component-library/issues"
+    },
+    "homepage": "https://github.com/general-mathematics/component-library#readme",
+    "devDependencies": {
+      "@types/react": "^18.3.11",
+      "@types/react-dom": "^18.3.0",
+      "concurrently": "^9.0.1",
+      "nodemon": "^3.1.7",
+      "react": "^18.3.1",
+      "typescript": "^5.6.2"
+    }
   }
-}
+  
