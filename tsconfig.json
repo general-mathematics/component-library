@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
-    "jsx": "react-jsx", // or "react" depending on your React version
+    "jsx": "react-jsx", // or "react"
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
@@ -16,16 +16,18 @@
     "allowSyntheticDefaultImports": true,
     "allowJs": true,
     "checkJs": false,
-    "noEmit": false, // Set to false to allow emitting output files
-    "outDir": "./dist", // Specify the output directory
-    "declaration": true // Optional: create .d.ts files for types
+    "noEmit": false,
+    "outDir": "./dist",
+    "declaration": true
   },
   "include": [
     "src/**/*",
-    "src/globals.d.ts" 
+    "src/types/cssModules.d.ts",
+    "src/globals.d.ts"
   ],
   "exclude": [
     "node_modules",
-    "**/*.spec.ts"
+    "**/*.spec.ts",
+    "dist" // Optionally exclude your dist folder
   ]
 }
