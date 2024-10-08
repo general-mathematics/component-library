@@ -14,3 +14,7 @@ build
 # Temporary files
 .DS_Store
 Thumbs.db
+
+Websites.code-workspace
+
+.vscode/
