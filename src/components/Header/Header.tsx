@@ -15,7 +15,7 @@ const Header:React.FC<HeaderProps> = ({linkName,siteTitle, href}) => {
         <header className={styles.header}>
           <div className={styles.headerContainer}>
             <div><a href="/">{siteTitle}</a></div>
-            <a className={styles.rightLink} href={href} target="_blank">{linkName}</a>
+            <a className={styles.rightLink} href={href}>{linkName}</a>
           </div>
 
         </header>

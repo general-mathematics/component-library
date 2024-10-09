@@ -1,3 +1,5 @@
+'use client'
+
 // src/components/GoogleAnalytics.tsx
 import { useEffect } from 'react';
 
