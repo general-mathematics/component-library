@@ -1,7 +1,16 @@
 .projectMetadataWrapper{
   grid-area: projectMetadata;
   grid-auto-flow: row;
+  border-top: 1px solid var(--grey-md);
+  padding: 1rem 0 1rem 0;
 }
+.projectMetadataWrapperText {
+  grid-area: projectMetadata;
+  grid-auto-flow: column;
+  border-top: 1px solid var(--grey-md);
+  padding: 2rem 0 1rem 0;
+}
+
 
 .projectMetadataContainer {
   white-space: no-wrap;
@@ -20,6 +29,15 @@
 
 @media (min-width: 768px) {
   .projectMetadataWrapper{
+    grid-area: projectMetadata;
     grid-auto-flow: column;
+    border-top: 0px solid var(--grey-md);
+    padding: 0;
+  }
+  .projectMetadataWrapperText{
+    grid-area: projectMetadata;
+    grid-auto-flow: column;
+    border-top: 1px solid var(--grey-md);
+    padding: 0;
   }
 }

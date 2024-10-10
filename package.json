@@ -3,6 +3,9 @@
   "version": "1.1.1",
   "description": "Just some basic UI components for our projects.",
   "main": "dist/index.js",
+  "exports": {
+    "./dist/styles/nested-styles/*": "./dist/nested-styles/*"
+  },
   "scripts": {
     "build": "tsc && node copy-css.js",
     "test": "echo \"Error: no test specified\" && exit 1",

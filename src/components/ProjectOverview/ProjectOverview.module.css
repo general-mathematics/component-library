@@ -1,5 +1,6 @@
 .projectOverviewWrapper{
   grid-area: projectOverview;
+  margin: 0 0 0 0;
   
 }
 
@@ -10,6 +11,12 @@
   .projectOverviewWrapper{
       grid-area: projectOverview;
       width: 60ch;
-      margin: 0 auto 0 0;
+      margin: 0 0 2rem 0;
   }
+  .projectOverviewWrapperText{
+      grid-area: projectOverview;
+      width: 60ch;
+      margin: 0 0 0 0;
+  }
+  
 }
