@@ -148,6 +148,7 @@ p {
 a {
     color: #1E90FF;
     text-decoration: underline;
+    font-size: 1rem;
 }
 
 a:hover {
