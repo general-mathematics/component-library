@@ -4,6 +4,7 @@ interface BetadataProps {
   title: string;
   description: string;
   keywords: string;
+  viewport?: string
 }
 
 const Betadata: React.FC<BetadataProps> = ({ title, description, keywords }) => {

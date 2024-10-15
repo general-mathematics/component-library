@@ -36,7 +36,7 @@
 
 html {
     background-color: var(--browser-background-color);
-    overscroll-behavior: none; 
+    /* overscroll-behavior: none;  */
     font-size:16px;
     height: 100%;
 }
@@ -54,7 +54,6 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  /* border: 2px solid red; */
 }
 .pageContainer{
   display: flex;
@@ -62,7 +61,9 @@ body {
   width:90%;
   margin: 0 auto;
   flex: 1;
+  /* border: 10px solid green; */
 }
+
 
 /* Typography */
 p {
@@ -157,13 +158,9 @@ a:hover {
 
 /* Utility Classes */
 .fullBleed {
-  width: 100vw;
-  /* Full viewport width */
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    width: 100vw; /* Full viewport width */
 }
 
 .no-padding {
@@ -185,5 +182,11 @@ a:hover {
 
 .no-margin{
   margin:0px;
+}
+
+/* Utility class to add to footer and other elmements when there is no container and lots of variegation in width  */
+.addContainerMargins {
+  width: 90%;
+  margin: 0 auto;
 }
 

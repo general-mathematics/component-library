@@ -4,12 +4,13 @@ interface FooterProps {
   year: number;
   companyName: string;
   email: string;
+  pageContainer:boolean;
 }
 
-const Footer: React.FC<FooterProps> = ({ year, companyName, email }) => {
+const Footer: React.FC<FooterProps> = ({ year, companyName, email, pageContainer=true }) => {
   return (
     <>
-    <footer className={`full-bleed ${styles.footer}`}>
+    <footer className={`${styles.footer} ${pageContainer ? "": "addContainerMargins"}`}>
       <div className={styles.email}>
         {email}
       </div>

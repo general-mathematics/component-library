@@ -7,15 +7,26 @@
 }
 
 .heroContainer {
+  display: flex;
+  /* Enables flexbox layout */
+  flex-direction: column;
+  /* Stacks child elements vertically */
+  justify-content: center;
+  /* Centers child elements vertically */
+  align-items: center;
+  /* Centers child elements horizontally */
   grid-area: heroContainer;
   position: relative;
   aspect-ratio: 4 / 3;
-  background-color:#3498db;
+  /* Aspect ratio */
+  background-color: #3498db;
+  /* Background color */
   font-size: 2rem;
+  /* Font size */
   overflow: hidden;
-  align-content: center;
-  justify-content: center;
+  /* Hides overflow */
   padding: 30px;
+  /* Padding */
 }
 
 .largeHeading {
@@ -32,11 +43,19 @@
 }
 
 .heroContainer {
+  display: flex;
+  /* Ensure it's flex on desktop */
+  flex-direction: column;
+  /* Stack items vertically */
+  justify-content: center;
+  /* Center content vertically */
+  align-items: center;
+  /* Center content horizontally */
   aspect-ratio: 4 / 3;
   overflow: hidden;
   max-height: 100vh;
   width: 100vw;
-  }
+}
 
   .largeHeading {
     font-size: 4rem;
