@@ -1,29 +1,41 @@
-
+/* Main container */
 .container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh;
-  /* Full viewport height */
-  box-sizing: border-box;
-  /* Include padding in height calculation */
+  min-height: 100svh;
+  /* Ensure container fills the full viewport height */
+  padding: 0;
+  /* Remove extra padding from the container */
 }
 
+/* Title at the top */
 .title {
   margin: 0;
-  /* Remove default margin */
   padding: 40px;
-  /* Add padding for spacing */
   font-size: 2.5rem;
-  /* Font size for the heading */
+  line-height: 1.2;
+  word-break: break-word;
+  /* Ensure long words break properly on mobile */
 }
 
+/* Button container at the bottom */
 .buttonContainer {
-  margin-top: auto;
-  /* Pushes the button to the bottom */
-  padding: 40px;
-  /* Add padding for spacing */
   display: flex;
+  margin-top: auto;
+  padding-bottom: 40px;
+  padding-right: 40px;
   justify-content: flex-end;
-  /* Align button to the right */
+}
+
+/* Media query for larger screens */
+@media (min-width: 600px) {
+  .title {
+    padding: 40px;
+    font-size: 2.5rem;
+  }
+
+  .buttonContainer {
+    padding: 40px;
+  }
 }

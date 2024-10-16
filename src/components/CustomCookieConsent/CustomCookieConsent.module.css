@@ -1,0 +1,32 @@
+/* src/components/CustomCookieConsent.module.css */
+.cookieBanner {
+  background-color: #333;
+  /* Custom background color */
+  color: white;
+  /* Custom text color */
+  font-size: 16px;
+}
+
+.button {
+  background-color: #ff4500;
+  /* Custom button color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: #ff6347;
+  /* Button hover state */
+}
+
+.declineButton {
+  background-color: #ccc;
+  color: black;
+}
+
+.declineButton:hover {
+  background-color: #bbb;
+}

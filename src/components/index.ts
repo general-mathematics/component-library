@@ -12,5 +12,7 @@ export { default as ProjectMetadata } from './ProjectMetadata/ProjectMetadata';
 export { default as ProjectOverview } from './ProjectOverview/ProjectOverview';
 export { default as ResponsiveImage } from './ResponsiveImage/ResponsiveImage';
 export { default as GoogleAnalytics } from './GoogleAnalytics/GoogleAnalytics';
+export { default as CustomCookieConsent } from './CustomCookieConsent/CustomCookieConsent';
+
 
 
