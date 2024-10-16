@@ -14,9 +14,14 @@ const Footer: React.FC<FooterProps> = ({ year, companyName, email, pageContainer
       <div className={styles.email}>
         {email}
       </div>
+
+    <div className={styles.copyrightPrivacy}>
       <div className={styles.copyright}>
-      &copy; {companyName} {year}
+     {companyName} {year}  &copy; 
       </div>
+      <a className={styles.privacy} href="/privacy">Privacy</a>
+    </div>
+
     </footer>
     </>
 

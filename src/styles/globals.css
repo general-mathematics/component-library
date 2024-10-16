@@ -34,6 +34,27 @@
   --space-xxl: 3rem;      /* 48px */
 }
 
+ul,
+ol {
+  padding-left: 1.2em;
+  /* Adjust the padding to control space for bullets or numbers */
+  list-style-position: inside;
+  /* Makes the bullet or number sit inside the list item */
+  margin: 0;
+  /* Reset margin to prevent unnecessary spacing */
+}
+
+li {
+  display: list-item; /* Ensures list-item behavior */
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--body-text-color);
+  margin: 0.50rem; /* Reset margin for list items */
+  padding: 0; /* Reset padding for list items */
+  text-indent: -1.2em; /* Adjust this value to pull text back to align with the bullet */
+}
+
+
 html {
     background-color: var(--browser-background-color);
     /* overscroll-behavior: none;  */
@@ -66,7 +87,7 @@ body {
 
 
 /* Typography */
-p {
+p{
     font-size: 1rem;
     line-height: 1.7;
     margin-bottom: 1.5rem;

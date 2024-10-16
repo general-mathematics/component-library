@@ -10,13 +10,32 @@
   right: 0;
 }
 
+
 .copyright{
+  order: 2;
+}
+
+.privacy{
+  text-decoration: none;
+  color: black;
   order: 1;
 }
+.privacy:hover{
+  color: black;
+}
+
 
 .email {
   margin-bottom: 0.25rem;
 }
+
+.copyrightPrivacy{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+
 
 @media (min-width: 768px) {
   .footer {
@@ -27,4 +46,12 @@
     align-items: center;
     /* Vertically align the items */
   }
+    .copyrightPrivacy {
+      display: flex;
+      flex-direction: row;
+      justify-items: space-between;  
+     }
+     .privacy {
+      margin: 0 1rem;
+     }
 }
