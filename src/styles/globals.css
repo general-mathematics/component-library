@@ -95,7 +95,7 @@ p{
 }
 
 .majorSecond h1{
-  font-size: 1.602rem;
+  font-size: 2.027rem;
   line-height: 1.2;
   letter-spacing: 0.02em;
   margin: 1rem 0;
@@ -103,14 +103,21 @@ p{
 }
 
 .majorSecond h2 {
-  font-size: 1.424rem;
+  font-size: 1.802rem;
   line-height: 1.3;
   letter-spacing: 0.02em;
   margin: 1rem 0;
   font-weight: 500;
 }
 .majorSecond h3 {
-  font-size: 1.266rem;
+  font-size: 1.602em;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  margin: 1rem 0;
+  font-weight: 500;
+}
+.majorSecond h4 {
+  font-size: 1.424em;
   line-height: 1.4;
   letter-spacing: 0.02em;
   margin: 1rem 0;
@@ -118,23 +125,28 @@ p{
 }
 
 .majorThird h1 {
-  font-size: 2.441rem;
+  font-size: 3.815rem;
   line-height: 1.2;
   letter-spacing: 0.02em;
   margin: 1rem 0;
   font-weight: 500;
 }
-
 .majorThird h2 {
-  font-size: 1.953rem;
+  font-size: 3.052rem;
   line-height: 1.3;
   letter-spacing: 0.02em;
   margin: 1rem 0;
   font-weight: 500;
 }
-
 .majorThird h3 {
-  font-size: 1.563rem;
+  font-size: 2.441rem;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  margin: 1rem 0;
+  font-weight: 500;
+}
+.majorThird h4 {
+  font-size: 1.953rem;
   line-height: 1.4;
   letter-spacing: 0.02em;
   margin: 1rem 0;

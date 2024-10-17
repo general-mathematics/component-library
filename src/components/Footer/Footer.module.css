@@ -17,7 +17,7 @@
 
 .privacy{
   text-decoration: none;
-  color: black;
+  color: red;
   order: 1;
 }
 .privacy:hover{
@@ -32,7 +32,7 @@
 .copyrightPrivacy{
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: rem;
 }
 
 
