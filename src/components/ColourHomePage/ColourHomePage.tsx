@@ -1,5 +1,4 @@
 import React from 'react';
-import OutlinedButton from '../OutlinedButton/OutlinedButton';
 import styles from './ColourHomePage.module.css';
 
 interface ColourHomePageProps {
@@ -17,8 +16,8 @@ const ColourHomePage: React.FC<ColourHomePageProps> = ({ siteName, homeHref, but
     <div className={`${styles.container} fullBleed`} style={{ backgroundColor: bgColor }}>
       <h1 className={styles.title} style={{ color: textColor }}>{siteName}</h1>
       <div className={styles.buttonContainer}>
-      <button className={styles.buttonClass} style={{ color: textColor}}>
-        <a href={buttonHref} className={styles.buttonClass}>{btnText}</a>
+      <button className={styles.button} style={{ color: textColor}}>
+        <a href={buttonHref} style={{color: textColor}}>{btnText}</a>
       </button>  
 
         

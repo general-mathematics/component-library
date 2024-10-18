@@ -13,6 +13,6 @@ export { default as ProjectOverview } from './ProjectOverview/ProjectOverview';
 export { default as ResponsiveImage } from './ResponsiveImage/ResponsiveImage';
 export { default as GoogleAnalytics } from './GoogleAnalytics/GoogleAnalytics';
 export { default as CustomCookieConsent } from './CustomCookieConsent/CustomCookieConsent';
-
+export { default as ColorHomePage } from './ColourHomePage/ColourHomePage';
 
 
