@@ -2,13 +2,13 @@
 .button {
   display: inline-block;
   padding: 10px 20px;
-  border: 2px solid hsl(0, 0%, 100%);
+  border: 2px solid darkgrey;
   /* Border color from global CSS variable */
   border-radius: 8px;
   /* Slightly rounded corners */
   background-color: transparent;
   /* Not filled */
-  color: white;
+  color: darkgray;
   /* Text color (match border) */
   text-decoration: none;
   /* Remove underline for links */

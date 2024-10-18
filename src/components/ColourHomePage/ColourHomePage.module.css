@@ -1,0 +1,41 @@
+/* Main container */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100svh;
+  /* Ensure container fills the full viewport height */
+  padding: 0;
+  /* Remove extra padding from the container */
+}
+
+/* Title at the top */
+.title {
+  margin: 0;
+  padding: 40px;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  word-break: break-word;
+  /* Ensure long words break properly on mobile */
+}
+
+/* Button container at the bottom */
+.buttonContainer {
+  display: flex;
+  margin-top: auto;
+  padding-bottom: 40px;
+  padding-right: 40px;
+  justify-content: flex-end;
+}
+
+/* Media query for larger screens */
+@media (min-width: 600px) {
+  .title {
+    padding: 40px;
+    font-size: 2.5rem;
+  }
+
+  .buttonContainer {
+    padding: 40px;
+  }
+}
