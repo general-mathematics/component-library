@@ -9,32 +9,28 @@
   left: 0;
   right: 0;
 }
-
-
-.copyright{
-  order: 2;
+.email {
+  color: black;
 }
+.copyrightPrivacy{
+  display: flex;
+  flex-direction: column;
 
+}
 .privacy{
   text-decoration: none;
-  color: red;
+  color: black;
   order: 1;
+  font-size: 0.875rem;
+  line-height: 0;
+  letter-spacing: 0.02em;
 }
 .privacy:hover{
   color: black;
 }
-
-
-.email {
-  margin-bottom: 0.25rem;
+.copyright{
+  order: 2;
 }
-
-.copyrightPrivacy{
-  display: flex;
-  flex-direction: column;
-  gap: rem;
-}
-
 
 
 @media (min-width: 768px) {
