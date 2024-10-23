@@ -1,0 +1,48 @@
+.youtubeWrapper {
+  position: relative;
+  /* Positioning for absolute child */
+  width: 100%;
+  /* Full width for all devices */
+  padding-bottom: 56.25%;
+  /* 16:9 aspect ratio (height/width * 100) */
+  background-color: black;
+  /* Optional: background color for visibility */
+  overflow: hidden;
+  /* Hide overflow for responsive behavior */
+}
+
+.youtubeWrapper.legacy {
+  /* For 4:3 aspect ratio */
+  padding-bottom: 75%;
+  /* 4:3 aspect ratio */
+}
+
+.youtubeWrapper iframe {
+  position: absolute;
+  /* Positioning to fill the wrapper */
+  top: 0;
+  /* Align to the top */
+  left: 0;
+  /* Align to the left */
+  width: 100%;
+  /* Full width of the wrapper */
+  height: 100%;
+  /* Full height of the wrapper */
+}
+
+/* Media Queries for larger screens */
+@media (min-width: 768px) {
+  .youtubeWrapper {
+    max-width: 100%;
+    /* Maintain full width */
+  }
+}
+
+@media (min-width: 1200px) {
+  .youtubeWrapper {
+    max-width: 800px;
+    /* Set a max width for larger screens */
+    margin: 0 auto;
+    /* Center the wrapper on larger screens */
+  }
+}
