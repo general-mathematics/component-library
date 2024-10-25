@@ -1,20 +1,141 @@
 .prodWrapper {
   width: 90%;
-  margin: 8rem auto;
+  margin: 4rem auto;
 }
 
 .productMainText {
   display: grid;
-  grid-auto-flow: column;
-  grid-gap: 1rem;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 0rem;
+  grid-template-columns: 1fr;
   grid-template-rows: auto;
   grid-template-areas: 
-  "full full full full"
-  "testBlue . . caption"
-  "squareImage1 squareImage2 squareImage3 squareImage3"
-  ". . . testRed"
-  ;
+    "productImage"
+    "productTitleStatusLockup"
+    "productSummary"
+    "productMeta"
+    "relatedLinks";
+}
+
+img.productImage {
+  grid-area: productImage;
+  max-width: 100%;
+  height: auto;
+}
+
+.productTitleStatusLockup {
+  grid-area: productTitleStatusLockup;
+  max-width: 95%;
+  margin: 1rem 0;
+}
+
+.productTitleStatusLockup h1 {
+  margin-bottom: 0rem;
+}
+
+.productSummary h2 {
+  margin-bottom: 1rem;
+}
+
+.productMeta {
+  grid-area: productMeta;
+  margin-bottom: 0px 0;
+}
+
+.productSummary {
+  grid-area: productSummary;
+}
+.relatedLinks {
+  grid-area: relatedLinks;
+  margin-bottom: 3rem;
+}
+
+.relatedLinks h3{
+  margin-bottom: 1rem;
+}
+
+.relatedLinks p a {
+  color: var(--base-link-color);
+  text-decoration: none;
+}
+.relatedLinks p {
+  margin-bottom: 0rem;
+}
+
+
+/* Medium MQ */
+@media (min-width: 768px) {
+
+  .productMainText {
+    display: grid;
+    max-width: 90%;
+    margin: 2rem auto;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0rem 4rem;
+    grid-template-areas: 
+      "productImage productTitleStatusLockup"
+      "productMeta productSummary"
+      "relatedLinks .";
+  }
+
+  img.productImage {
+    min-width: 15rem;
+    max-width: 100%;
+    justify-self: start;
+  }
+
+  .productMeta{
+    justify-self: start;
+    margin-top: 1rem;
+  }
+
+  .productTitleStatusLockup {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .productTitle {
+    align-self: start;
+    margin-top: 3rem;
+  }
+  .productTitle p {
+    margin-bottom: 0.5rem;
+  }
+
+  .productTitleStatusLockup h1 {
+    margin-bottom: 1rem;
+  }
+  
+  .productSummary h2 {
+    margin-bottom: 1rem;
+  }
+
+  .productStatus {
+    align-self: end;
+    margin-bottom: 2rem;
+  }
+
+  .productSummary{
+    min-width: 35ch;
+    max-width: 70ch;
+  }
+
 
 }
 
+/* Large MQ */
+@media (min-width: 1024px) {
+
+  .productMainText {
+    display: grid;
+    max-width: 80%;
+    margin: 1rem auto 4rem auto;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem 6rem;
+    grid-template-areas:
+      "productImage productTitleStatusLockup"
+      "productMeta productSummary"
+      "relatedLinks .";
+
+  }
+
+}

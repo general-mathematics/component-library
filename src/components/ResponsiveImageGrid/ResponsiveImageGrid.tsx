@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './ResponsiveImage.module.css';
+import styles from './ResponsiveImageGrid.module.css';
 
-interface ResponsiveImageProps {
+interface ResponsiveImageGridProps {
   src: string;
   alt: string;
   fullBleed?: boolean;
@@ -11,7 +11,7 @@ interface ResponsiveImageProps {
   useGrid?: boolean; // New prop to allow grid styling
 }
 
-const ResponsiveImage: React.FC<ResponsiveImageProps> = ({
+const ResponsiveImageGrid: React.FC<ResponsiveImageGridProps> = ({
   src = 'https://images.unsplash.com/photo-1615397349754-cfa2066a298e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dHViZXxlbnwwfDF8MHx8fDI%3D',
   alt = 'A beautiful scene',
   fullBleed = false,
@@ -45,7 +45,6 @@ const ResponsiveImage: React.FC<ResponsiveImageProps> = ({
   `;
 
   return (
-    <div className={containerClass}>
       <img
         src={src}
         alt={alt}
@@ -54,8 +53,7 @@ const ResponsiveImage: React.FC<ResponsiveImageProps> = ({
         className={`${styles.image} ${className}`} // Combine local and global classes
         loading="lazy"
       />
-    </div>
   );
 };
 
-export default ResponsiveImage;
+export default ResponsiveImageGrid;
