@@ -2,9 +2,10 @@
 .cookieBanner {
   background-color: #333;
   /* Custom background color */
-  color: white;
+  color: red;
   /* Custom text color */
   font-size: 16px;
+  padding: 3rem;
 }
 
 .button {

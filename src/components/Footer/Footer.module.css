@@ -1,53 +1,109 @@
 .footer {
   display: flex;
-  padding: 1rem 0rem;
   flex-direction: column;
+  /* Start with column layout for mobile */
   justify-content: flex-start;
-  border-top: 1px solid var(--grey-sm) ;
+  align-items: flex-start;
+  /* padding: 1rem; */
   font-size: 0.875rem;
   letter-spacing: 0.02em;
-  left: 0;
-  right: 0;
+  background-color:#272525;
+  width: 100%;
+
+
 }
-.email {
-  color: black;
+
+.footerContainer {
+  width: 90%;
+  margin: 2rem auto 2rem auto;
 }
-.copyrightPrivacy{
+
+
+
+.navLinks {
+  list-style: none;
   display: flex;
   flex-direction: column;
+  /* Stack links on mobile */
+  gap: 0.25rem 3rem;
+  padding: 0;
 
 }
-.privacy{
+
+
+
+.navLinks a {
   text-decoration: none;
-  color: black;
-  order: 1;
+  color: white;
   font-size: 0.875rem;
-  line-height: 0;
   letter-spacing: 0.02em;
+  transition: color 0.2s ease;
+
 }
-.privacy:hover{
-  color: black;
+
+.navLinks a:hover {
+  color: #007bff;
 }
-.copyright{
-  order: 2;
+
+.copyrightPrivacy {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  /* Stack items on mobile */
+  align-items: flex-end;
+  /* width: 100%; */
+  color: white;
+
+}
+
+.copyright {
+  order: 1;
+  /* margin-bottom: 2rem; */
 }
 
 
-@media (min-width: 768px) {
+@media (min-width: 843px) {
+
+  /* Desktop view */
   .footer {
     flex-direction: row;
-    /* Side-by-side on larger screens */
+    /* Switch to row layout */
     justify-content: space-between;
-    /* Spread items horizontally */
-    align-items: center;
-    /* Vertically align the items */
+    align-items: flex-start;
+    padding: 1rem 0;
   }
-    .copyrightPrivacy {
-      display: flex;
-      flex-direction: row;
-      justify-items: space-between;  
-     }
-     .privacy {
-      margin: 0 1rem;
-     }
+
+  .footerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    /* Remove extra padding on larger screens */
+  }
+
+  .navLinks {
+    flex-direction: row;
+    /* Lay out links horizontally */
+    gap: 2rem;
+    width: auto;
+    /* Let nav links take their natural width */
+    margin: 0;
+    /* Remove bottom margin */
+  }
+
+  /* Align copyright and privacy to the right */
+  .copyrightPrivacy {
+    flex-direction: row;
+    /* Place them side by side */
+    gap: 2rem;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .copyright {
+    order: 1;
+    margin-bottom: 0rem;
+  }
+  .copyrightPrivacy{
+    margin-top: 0px;
+  }
 }

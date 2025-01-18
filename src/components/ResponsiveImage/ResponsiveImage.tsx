@@ -1,57 +1,81 @@
 import React from 'react';
 import styles from './ResponsiveImage.module.css';
 
+interface LayoutProps {
+  fullBleed?: boolean;
+  slightBleed?: boolean;
+  fullBleedMobile?: boolean;
+  useGrid?: boolean;
+}
+
+interface StyleProps {
+  objectFit?: React.CSSProperties['objectFit'];
+  objectPosition?: React.CSSProperties['objectPosition'];
+  height?: string; // Set desktop height dynamically when using component.
+  heightMobile?: string; // Set mobile height dynamically when using component.
+  marginTop?: string; // Optional top margin.
+  marginBottom?: string; // Optional bottom margin.
+}
+
 interface ResponsiveImageProps {
   src: string;
   alt: string;
-  fullBleed?: boolean;
-  slightBleed?: boolean;
-  fullBleedMobile?: boolean; // New prop for full-bleed on mobile
-  className?: string; // New prop to pass a global class
-  useGrid?: boolean; // New prop to allow grid styling
+  layout?: LayoutProps;
+  styleOverrides?: StyleProps;
+  className?: string;
 }
 
 const ResponsiveImage: React.FC<ResponsiveImageProps> = ({
-  src = 'https://images.unsplash.com/photo-1615397349754-cfa2066a298e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dHViZXxlbnwwfDF8MHx8fDI%3D',
-  alt = 'A beautiful scene',
-  fullBleed = false,
-  slightBleed = false,
-  fullBleedMobile = false, // Default to false
-  className = '', // Default to an empty string
-  useGrid = false, // Default to false
+  src,
+  alt,
+  layout = {},
+  styleOverrides = {},
+  className = '',
 }) => {
-  let containerClass = `${styles.container} ${useGrid ? styles.gridContainer : ''}`;
+  const {
+    fullBleed = false,
+    slightBleed = false,
+    fullBleedMobile = false,
+    useGrid = false,
+  } = layout;
 
-  if (fullBleed) {
-    containerClass = styles.containerFullBleed;
-  } else if (slightBleed) {
-    containerClass = styles.containerSlightBleed;
-  } else if (fullBleedMobile) {
-    containerClass = styles.containerFullBleedMobile;
-  }
+  const {
+    objectFit = 'cover',
+    objectPosition = 'center',
+    height = undefined, // Only apply for desktop via CSS
+    heightMobile = undefined, // Default to CSS-defined value
+    marginTop,
+    marginBottom,
+  } = styleOverrides;
 
-  const srcSet = `
-    ${src.replace('2400w', '800w')} 800w,
-    ${src.replace('2400w', '1200w')} 1200w,
-    ${src.replace('2400w', '1600w')} 1600w,
-    ${src} 2400w
-  `;
-
-  const sizes = `
-    (max-width: 800px) 100vw, 
-    (max-width: 1200px) 75vw, 
-    (max-width: 1600px) 50vw, 
-    100vw
-  `;
+  const containerClass = `${styles.container} ${
+    fullBleed
+      ? styles.containerFullBleed
+      : slightBleed
+      ? styles.containerSlightBleed
+      : fullBleedMobile
+      ? styles.containerFullBleedMobile
+      : ''
+  } ${useGrid ? styles.gridContainer : ''}`;
 
   return (
-    <div className={containerClass}>
+    <div
+      className={containerClass}
+      style={{
+        marginTop: marginTop || undefined, // Use prop or CSS default
+        marginBottom: marginBottom || undefined, // Use prop or CSS default
+      }}
+    >
       <img
         src={src}
         alt={alt}
-        srcSet={srcSet}
-        sizes={sizes}
-        className={`${styles.image} ${className}`} // Combine local and global classes
+        className={`${styles.image} ${className}`}
+        style={{
+          objectFit,
+          objectPosition,
+          ...(heightMobile && { '--mobile-height': heightMobile }),
+          ...(height && { '--desktop-height': height }),
+        }}
         loading="lazy"
       />
     </div>

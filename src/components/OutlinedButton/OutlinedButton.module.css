@@ -2,13 +2,13 @@
 .button {
   display: inline-block;
   padding: 10px 20px;
-  border: 2px solid darkgrey;
+  border: 2px solid white;
   /* Border color from global CSS variable */
   border-radius: 8px;
   /* Slightly rounded corners */
   background-color: transparent;
   /* Not filled */
-  color: darkgray;
+  color: white;
   /* Text color (match border) */
   text-decoration: none;
   /* Remove underline for links */
@@ -19,7 +19,9 @@
 .button:hover {
   background-color: transparent;
   /* Light transparency on hover */
-  border: 2px solid hsl(0, 0%, 80%);;  
-  color: hsl(0, 0%, 100%);
   text-decoration: none ;
+  cursor: pointer;
+  color: white;
+  /* box-shadow: 0 0 5px 2px rgb(255, 255, 255);  */
+  transition: all 0.3s ease; /* Smooth transitions */
 }

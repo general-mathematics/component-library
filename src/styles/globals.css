@@ -1,7 +1,22 @@
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  /* outline: 1px solid rgba(255, 0, 0, 0.5); */
+}
+
+/* Fix for iOS Safari viewport width (100vw issue) */
+@supports (-webkit-touch-callout: none) {
+  body {
+    width: 100%;
+    /* Ensure Safari doesn't consider the viewport scrollbar */
+  }
+}
+
+.cookieButtonContainer {
+  margin-bottom: 1rem;
 }
 
 :root {
@@ -10,35 +25,41 @@
   --browser-background-color: #ffffff;
   --font-family: 'IBM Plex Sans', sans-serif;
   --body-text-color: rgb(65, 64, 66);
-  --base-link-color: #1E90FF;
+  --base-link-color: #1e90ff;
 
   /* Greys */
-  --grey-xs: #f7f7f7;  /* Very light grey */
-  --grey-sm: #e0e0e0;  /* Light grey */
-  --grey-md: #b3b3b3;  /* Medium grey */
-  --grey-lg: #7d7d7d;  /* Dark grey */
-  --grey-xl: #4d4d4d;  /* Very dark grey */
+  --grey-xs: #f7f7f7; /* Very light grey */
+  --grey-sm: #e0e0e0; /* Light grey */
+  --grey-md: #b3b3b3; /* Medium grey */
+  --grey-lg: #7d7d7d; /* Dark grey */
+  --grey-xl: #4d4d4d; /* Very dark grey */
 
-  /* Media Queries */ 
+  /* Media Queries */
   --breakpoint-mobile: 375px;
   --breakpoint-tablet: 768px;
   --breakpoint-desktop: 1024px;
 
   /* Spacing */
-  --space-xxs: 0.125rem;  /* 2px */
-  --space-xs: 0.25rem;    /* 4px */
-  --space-sm: 0.5rem;     /* 8px */
-  --space-md: 1rem;       /* 16px */
-  --space-lg: 1.5rem;     /* 24px */
-  --space-xl: 2rem;       /* 32px */
-  --space-xxl: 3rem;      /* 48px */
+  --space-xxs: 0.125rem; /* 2px */
+  --space-xs: 0.25rem; /* 4px */
+  --space-sm: 0.5rem; /* 8px */
+  --space-md: 1rem; /* 16px */
+  --space-lg: 1.5rem; /* 24px */
+  --space-xl: 2rem; /* 32px */
+  --space-xxl: 3rem; /* 48px */
+
+  /* Images */
+  --object-fit: cover; /* Default fit for images */
+  --object-position: center; /* Default position for images */
+  --mobile-height: 50vh; /* Default height for mobile images */
+  --desktop-height: auto; /* Default height for desktop images */
 }
 
 ul,
 ol {
   padding-left: 1.2em;
   /* Adjust the padding to control space for bullets or numbers */
-  list-style-position: inside;
+  /* list-style-position: inside; */
   /* Makes the bullet or number sit inside the list item */
   margin: 0;
   /* Reset margin to prevent unnecessary spacing */
@@ -49,52 +70,75 @@ li {
   font-size: 1rem;
   line-height: 1.7;
   color: var(--body-text-color);
-  margin: 0.50rem; /* Reset margin for list items */
+  /* margin: 0.50rem;  */
   padding: 0; /* Reset padding for list items */
-  text-indent: -1.2em; /* Adjust this value to pull text back to align with the bullet */
 }
 
-
 html {
-    background-color: var(--browser-background-color);
-    /* overscroll-behavior: none;  */
-    font-size:16px;
-    height: 100%;
+  background-color: var(--browser-background-color);
+  /* overscroll-behavior: none;  */
+  font-size: 16px;
+  height: 100%;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 body {
-    font-family: var(--font-family);
-    height: 100%;
-    overflow-x: hidden;
-    /* overscroll-behavior: none; Prevents the elastic effect */
+  font-family: var(--font-family);
+  height: 100%;
+  overflow-x: hidden;
+  width: 100vw;
+  /* overscroll-behavior: none; Prevents the elastic effect */
 }
 
-.pageWrapper{
-  width:100%;
+.pageWrapper {
+  width: 100%;
   margin: 0rem auto;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
-.pageContainer{
+.pageContainer {
   display: flex;
   flex-direction: column;
-  width:90%;
+  width: 90%;
   margin: 0 auto;
   flex: 1;
   /* border: 10px solid green; */
 }
 
-
 /* Typography */
-p{
-    font-size: 1rem;
-    line-height: 1.7;
-    margin-bottom: 1.5rem;
-    color: var(--body-text-color);
+p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  color: var(--body-text-color);
 }
 
-.majorSecond h1{
+/* Heading styles */
+.info h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+  /* Darker color for better contrast */
+}
+
+.info h2 {
+  font-size: 1.5rem;
+  line-height: 1.3;
+  margin-bottom: 0.75rem;
+  color: #34495e;
+}
+
+.info h3 {
+  font-size: 1.25rem;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+  color: #4d5966;
+}
+
+.majorSecond h1 {
   font-size: 2.027rem;
   line-height: 1.2;
   letter-spacing: 0.02em;
@@ -154,7 +198,7 @@ p{
 }
 
 .perfectFourth h1 {
-  font-size: 5.610rem;
+  font-size: 5.61rem;
   line-height: 1.2;
   letter-spacing: 0.02em;
   margin: 1rem 0;
@@ -180,22 +224,22 @@ p{
 /* Links */
 
 a {
-    color: #1E90FF;
-    text-decoration: underline;
-    font-size: 1rem;
-    line-height: 1.7;
+  color: #1e90ff;
+  text-decoration: underline;
+  font-size: 1rem;
+  line-height: 1.7;
 }
 
 a:hover {
-    color: #1E90FF;
-    text-decoration: none;
+  color: #1e90ff;
+  text-decoration: none;
 }
 
 /* Utility Classes */
 .fullBleed {
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
-    width: 100vw; /* Full viewport width */
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  width: 100vw; /* Full viewport width */
 }
 
 .no-padding {
@@ -215,8 +259,8 @@ a:hover {
   font-weight: 500;
 }
 
-.no-margin{
-  margin:0px;
+.no-margin {
+  margin: 0px;
 }
 
 /* Utility class to add to footer and other elmements when there is no container and lots of variegation in width  */
@@ -225,11 +269,10 @@ a:hover {
   margin: 0 auto;
 }
 
-.marginXXL{
+.marginXXL {
   margin: 400px 0;
 }
 
-.imageTest{
+.imageTest {
   border: 10px solid yellow;
 }
-

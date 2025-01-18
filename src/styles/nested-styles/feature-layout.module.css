@@ -2,19 +2,31 @@
 
 .featureMain {
   width: 100%;
-  margin: 0rem auto;
   flex: 1;
   /* This flex-grow is to ensure the footer stays stuck to the bottom. Main does not need to be display flex for this and does not need to be so. */
   /* border: 1px solid pink; */
+  margin: 0 auto 4rem auto;
 }
-
+.featureArticle {
+  margin: 0 auto 6rem auto;
+  overflow: visible;
+}
 
 /* Desktop MQ */
 @media (min-width: 768px) {
   .featureArticle {
-    width: 60ch;
-    margin: 0 auto;
+    max-width: 60ch;
+    margin: 0 auto 12rem auto;
     /* border: 1px solid green; */
+    /* flex: 1; */
+    position: relative;
+    overflow: visible;
+  }
+  .featureMain {
+    width: 100%;
     flex: 1;
+    /* This flex-grow is to ensure the footer stays stuck to the bottom. Main does not need to be display flex for this and does not need to be so. */
+    /* border: 1px solid pink; */
+    margin: 0 auto 4rem auto;
   }
 }

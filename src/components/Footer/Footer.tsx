@@ -1,33 +1,41 @@
-import styles from './Footer.module.css';
+// components/Footer.js
+import styles from '../Footer/Footer.module.css';
 
-interface FooterProps {
+interface FooterProps{
+  siteName: string;
   year: number;
-  companyName: string;
-  email: string;
-  pageContainer:boolean;
+  href1: string;
+  href2: string;
+  href3: string;
+  href4: string;
+  linkname1: string;
+  linkname2: string;
+  linkname3: string;
+  linkname4: string;
+  hasPageContainer: boolean;
+
 }
 
-const Footer: React.FC<FooterProps> = ({ year, companyName, email, pageContainer=true }) => {
+const Footer:React.FC<FooterProps> = ({siteName, year, href1, href2, href3, href4, linkname1, linkname2, linkname3, linkname4, hasPageContainer=true}) => {
   return (
-    <>
-    <footer className={`${styles.footer} ${pageContainer ? "": "addContainerMargins"}`}>
-      <div className={styles.email}>
-        {email}
-      </div>
+    <footer className={`${styles.footer}`}>
+      <div className={`${styles.footerContainer} ${hasPageContainer ? "": "addContainerMargins"}`}>
+        {/* Left side links */}
+        <ul className={styles.navLinks}>
+          <li><a href={href1}>{linkname1}</a></li>
+          <li><a href={href2}>{linkname2}</a></li>
+          <li><a href={href3}>{linkname3}</a></li>
+          <li><a href={href4}>{linkname4}</a></li>
+        </ul>
 
-    <div className={styles.copyrightPrivacy}>
-      <div className={styles.copyright}>
-        &copy; {companyName} {year}  
+        {/* Right side: Copyright and Privacy */}
+        <div className={styles.copyrightPrivacy}>
+          <div className={styles.copyright}>© {year} {siteName}</div>
+          <div className={styles.privacy}>Privacy Policy</div>
+        </div>
       </div>
-      <div>
-        <a className={styles.privacy} href="/privacy">Privacy</a>
-      </div>
-    </div>
-
     </footer>
-    </>
-
   );
-};
+}
 
 export default Footer;
