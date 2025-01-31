@@ -1,0 +1,27 @@
+/* Grid container that defines layout */
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem; /* Adjust spacing */
+}
+
+/* Responsive adjustments for larger screens */
+@media (min-width: 768px) {
+  .gridContainer {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for wider screens */
+    align-items: center; /* Center image and text */
+  }
+}
+
+/* Ensures images placed in the grid don't inherit other behaviors */
+.localGridContainer {
+  grid-area: var(--grid-area, auto); /* Assigns correct grid placement */
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Content inside grid */
+.gridContent {
+  padding: 2rem;
+}

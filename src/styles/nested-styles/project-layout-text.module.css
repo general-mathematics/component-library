@@ -4,9 +4,9 @@
   grid-gap: 1rem;
   grid-template-columns: 1fr;
   grid-template-areas:
-    "heroWrapper"
-    "projectOverview"
-    "projectMetadata";
+    'heroWrapper'
+    'projectOverview'
+    'projectMetadata';
 }
 
 @media (min-width: 768px) {
@@ -17,9 +17,9 @@
     grid-gap: 2rem;
     margin-bottom: 2rem;
     grid-template-areas:
-      "heroWrapper heroWrapper heroWrapper"
-      ". projectOverview ."
-      ". projectMetadata ."
+      'heroWrapper heroWrapper heroWrapper'
+      '. projectOverview .'
+      '. projectMetadata .';
   }
 }
 
@@ -32,8 +32,8 @@
     justify-content: center;
     margin-bottom: 3rem;
     grid-template-areas:
-      "heroWrapper heroWrapper heroWrapper"
-      ". projectOverview ."
-      ". projectMetadata ."
+      'heroWrapper heroWrapper heroWrapper'
+      '. projectOverview .'
+      '. projectMetadata .';
   }
 }
