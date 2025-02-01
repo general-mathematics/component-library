@@ -15,9 +15,11 @@ const Header: React.FC<HeaderProps> = ({ linkName, siteTitle, href }) => {
         <div>
           <a href="/">{siteTitle}</a>
         </div>
-        <a className={styles.rightLink} href={href}>
-          {linkName}
-        </a>
+        {linkName && (
+          <a className={styles.rightLink} href={href}>
+            {linkName}
+          </a>
+        )}
       </div>
     </header>
   );

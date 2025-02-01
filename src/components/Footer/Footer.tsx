@@ -9,9 +9,9 @@ interface FooterProps {
   href3: string;
   href4: string;
   linkname1: string;
-  linkname2: string;
-  linkname3: string;
-  linkname4: string;
+  linkname2?: string;
+  linkname3?: string;
+  linkname4?: string;
 }
 
 const Footer: React.FC<FooterProps> = ({
@@ -34,15 +34,21 @@ const Footer: React.FC<FooterProps> = ({
           <li>
             <a href={href1}>{linkname1}</a>
           </li>
-          <li>
-            <a href={href2}>{linkname2}</a>
-          </li>
-          <li>
-            <a href={href3}>{linkname3}</a>
-          </li>
-          <li>
-            <a href={href4}>{linkname4}</a>
-          </li>
+          {linkname2 && (
+            <li>
+              <a href={href2}>{linkname2}</a>
+            </li>
+          )}
+          {linkname3 && (
+            <li>
+              <a href={href3}>{linkname3}</a>
+            </li>
+          )}
+          {linkname4 && (
+            <li>
+              <a href={href4}>{linkname4}</a>
+            </li>
+          )}
         </ul>
 
         {/* Right side: Copyright and Privacy */}

@@ -1,7 +1,10 @@
 import React from 'react';
 import ResponsiveImage from '../ResponsiveImage/ResponsiveImage';
+import Betadata from '../Betadata/Betadata';
 
 interface SlightBleedLayoutProps {
+  metaTitle: string;
+  metaDescription: string;
   imageSrc: string; // Image source URL
   imageAlt: string; // Alt text for the image
   heading: string; // Main heading text
@@ -14,6 +17,8 @@ interface SlightBleedLayoutProps {
 }
 
 const SlightBleedLayout: React.FC<SlightBleedLayoutProps> = ({
+  metaTitle,
+  metaDescription,
   imageSrc,
   imageAlt,
   heading,
@@ -26,6 +31,7 @@ const SlightBleedLayout: React.FC<SlightBleedLayoutProps> = ({
 }) => {
   return (
     <>
+      <Betadata title={metaTitle} description={metaDescription}></Betadata>
       <div className="slightBleedLayoutContainer">
         <ResponsiveImage
           src={imageSrc}
@@ -46,8 +52,8 @@ const SlightBleedLayout: React.FC<SlightBleedLayoutProps> = ({
             mobileBottomMargin,
           }}
         />
+        <h1 className="hero-heading">{heading}</h1>
         <div className="contentContainer">
-          <h1 className="hero-heading">{heading}</h1>
           {summary && <div className="summary">{summary}</div>}
           {children}
         </div>

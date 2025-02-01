@@ -128,6 +128,19 @@ body {
   }
 }
 
+.noImgContentContainer {
+  max-width: 90%;
+  margin: 6rem auto;
+  position: relative;
+  overflow: visible;
+  /* border: 10px solid blue; */
+
+  @media (min-width: 768px) {
+    max-width: 55ch;
+    /* border: 10px solid blue; */
+  }
+}
+
 .cookieButtonContainer {
   margin-bottom: 1rem;
 }
@@ -208,7 +221,12 @@ h3 {
   font-size: clamp(var(--font-size-hero-min), 8vw, var(--font-size-hero-max));
   line-height: 1.1;
   text-align: center;
-  margin: 1.5rem;
+  margin: 2rem auto;
+  width: 70%;
+  @media (min-width: 768px) {
+    margin: 2rem auto;
+    width: 50vw;
+  }
 }
 
 .summary {
@@ -217,7 +235,7 @@ h3 {
     2.5vw,
     var(--font-size-summary-max)
   );
-  color: grey;
+  color: rgb(87, 81, 81);
   margin-bottom: 2rem;
   line-height: 1.5;
 }
