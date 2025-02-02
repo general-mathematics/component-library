@@ -41,10 +41,10 @@ const Product: React.FC<ProductProps> = ({
           <div>
             <h1 className={styles.productTitle}>{title}</h1>
             <h2 className={styles.productProducer}>{producer}</h2>
-            <p className={styles.shortDescription}>{shortDescription}</p>
+            <p className={styles.productShortDescription}>{shortDescription}</p>
           </div>
-          <div>
-            <p className={styles.productStatus}>{status}</p>
+          <div className= {styles.productStatus}>
+            <p>{status}</p>
             {price && <p>{price}</p>}
           </div>
         </div>
