@@ -7,7 +7,7 @@ interface FooterProps {
   href1: string;
   href2: string;
   href3: string;
-  href4: string;
+  href4?: string;
   linkname1: string;
   linkname2?: string;
   linkname3?: string;

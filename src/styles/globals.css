@@ -128,6 +128,20 @@ body {
   }
 }
 
+.infoPageH1 {
+  font-size: 3rem;
+  
+}
+
+.infoPageH2 {
+ font-size: 2rem;
+}
+
+.infoPageH3 {
+  font-size: 1.5rem;
+
+}
+
 .noImgContentContainer {
   max-width: 90%;
   margin: 6rem auto;
