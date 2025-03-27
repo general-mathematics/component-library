@@ -17,8 +17,9 @@ export { default as CustomCookieConsent } from './CustomCookieConsent/CustomCook
 export { default as ColorHomePage } from './ColourHomePage/ColourHomePage';
 export { default as Summary } from './Summary/Summary';
 export { default as YouTube } from './YouTube/YouTube';
-export { default as HeroLayout } from './HeroLayout/HeroLayout';
+export { default as HeroLayout, HeadingStyle } from './HeroLayout/HeroLayout';
 export { default as SlightBleedLayout } from './SlightBleedLayout/SlightBleedLayout';
 export { default as ShowPageGridLayout } from './ShowPageGridLayout/ShowPageGridLayout';
 export { default as GridCanvas } from './GridCanvas/GridCanvas';
 export { default as Product } from './Product/Product';
+export { default as CodeSnippet } from './CodeSnippet/CodeSnippet';

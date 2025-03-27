@@ -7,7 +7,7 @@
   /* padding: 1rem; */
   font-size: 0.875rem;
   letter-spacing: 0.02em;
-  background-color: #272525;
+  background-color: #526d82;
   width: 100%;
 }
 
@@ -34,7 +34,7 @@
 }
 
 .navLinks a:hover {
-  color: #007bff;
+  color: #fdfdfd;
 }
 
 .copyrightPrivacy {
@@ -50,6 +50,11 @@
 .copyright {
   order: 1;
   /* margin-bottom: 2rem; */
+}
+.privacy a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.875rem;
 }
 
 @media (min-width: 843px) {
@@ -95,5 +100,9 @@
   }
   .copyrightPrivacy {
     margin-top: 0px;
+  }
+  .privacy a {
+    text-decoration: none;
+    color: white;
   }
 }

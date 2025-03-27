@@ -1,4 +1,4 @@
-.header{
+.header {
   height: 30px;
   position: fixed;
   top: 0;
@@ -12,40 +12,28 @@
 }
 
 .headerContainer {
-  top:0;
+  top: 0;
   width: 90%;
   margin: 0 auto;
   height: 28px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 0.90rem;
+  font-size: 0.9rem;
   font-weight: 600;
   letter-spacing: 0.02em;
-  background-color: #ffffff;
+  background-color: #fdfdfd;
 }
-.headerContainer a{
-  color:black;
+.headerContainer a {
+  color: #bb2511;
   font-weight: 500;
   text-decoration: none;
 }
 
-.headerContainer a:hover{
+.headerContainer a:hover {
   text-decoration: none;
 }
 a.rightLink {
-  color: var(--body-text-color);
+  color: #bb2511;
   font-weight: 400;
 }
-
-a.rightLink:hover{
-  color: var(--grey-l);
-}
-
-
-
-
-
-
-
-

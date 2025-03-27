@@ -5,8 +5,8 @@ interface FooterProps {
   siteName: string;
   year: number;
   href1: string;
-  href2: string;
-  href3: string;
+  href2?: string;
+  href3?: string;
   href4?: string;
   linkname1: string;
   linkname2?: string;
@@ -56,7 +56,9 @@ const Footer: React.FC<FooterProps> = ({
           <div className={styles.copyright}>
             © {year} {siteName}
           </div>
-          <div className={styles.privacy}>Privacy Policy</div>
+          <div className={styles.privacy}>
+            <a href="/privacy">Privacy Policy</a>
+          </div>
         </div>
       </div>
     </footer>

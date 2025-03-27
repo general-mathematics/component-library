@@ -23,7 +23,8 @@
   "include": [
     "src/**/*",
     "src/types/cssModules.d.ts",
-    "src/globals.d.ts"
+    "src/globals.d.ts",
+    "types"
   ],
   "exclude": [
     "node_modules",

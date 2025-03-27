@@ -1,25 +1,26 @@
+/* Global CSS - Streamlined & Tidied Up */
+
 :root {
-  --primary-color: #3498db;
+  --primary-color: #005bac;
   --secondary-color: #2ecc71;
-  --browser-background-color: #ffffff;
+  --background-color: #fdfdfd;
   --font-family: 'IBM Plex Sans', sans-serif;
-  --body-text-color: rgb(65, 64, 66);
-  --base-link-color: #1e90ff;
+  --text-color: #333333;
+  --link-color: #005bac;
 
-  /* Greys */
-  --grey-xs: #f7f7f7; /* Very light grey */
-  --grey-sm: #e0e0e0; /* Light grey */
-  --grey-md: #b3b3b3; /* Medium grey */
-  --grey-lg: #7d7d7d; /* Dark grey */
-  --grey-xl: #4d4d4d; /* Very dark grey */
+  /* Grey Scale */
+  --grey-lightest: #f7f7f7;
+  --grey-light: #e0e0e0;
+  --grey-medium: #b3b3b3;
+  --grey-dark: #7d7d7d;
+  --grey-darkest: #4d4d4d;
 
-  /* Media Queries */
+  /* Breakpoints */
   --breakpoint-mobile: 375px;
   --breakpoint-tablet: 768px;
   --breakpoint-desktop: 1024px;
 
-  /* Spacing */
-  --space-xxs: 0.125rem; /* 2px */
+  /* Spacing Scale */
   --space-xs: 0.25rem; /* 4px */
   --space-sm: 0.5rem; /* 8px */
   --space-md: 1rem; /* 16px */
@@ -27,66 +28,40 @@
   --space-xl: 2rem; /* 32px */
   --space-xxl: 3rem; /* 48px */
 
-  /* Images */
-  --object-fit: cover; /* Default fit for images */
-  --object-position: center; /* Default position for images */
-  --mobile-height: 50vh; /* Default height for mobile images */
-  --desktop-height: auto; /* Default height for desktop images */
+  /* Mobile default heading sizes (8px increments) */
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-body: 1rem; /* 16px */
+  --font-size-h3: 1.5rem; /* 24px */
+  --font-size-h2: 2rem; /* 32px */
+  --font-size-h1: 2.5rem; /* 40px */
+  --font-size-hero: 2.5rem; /* 48px */
+  --font-size-infohero: 3rem;
+  --font-size-infoPage: 2.5rem;
+  --font-size-summary: 1.25rem;
 
-  /* Typography */
-  --base-font-size: 16px; /* Default font size */
-  --line-height-multiplier: 1.5; /* Line-height ratio */
-  --spacing-unit: 8px; /* Base spacing unit */
+  /* Font Weights */
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
 
-  --font-size-body-min: 1rem; /* 16px */
-  --font-size-body-max: 1.125rem; /* 18px */
-
-  --font-size-h1-min: 2.5rem; /* 40px */
-  --font-size-h1-max: 4rem; /* 64px */
-
-  --font-size-h2-min: 2rem; /* 32px */
-  --font-size-h2-max: 3rem; /* 48px */
-
-  --font-size-h3-min: 1.75rem; /* 28px */
-  --font-size-h3-max: 2.5rem; /* 40px */
-
-  --font-size-hero-min: 3rem; /* 48px */
-  --font-size-hero-max: 6rem; /* 96px */
-
-  --font-size-summary-min: 1.125rem; /* 18px */
-  --font-size-summary-max: 1.5rem; /* 24px */
-
-  --font-weight-regular: 400;
-  --font-weight-medium: 500;
-  --font-weight-semibold: 600;
+  /* Line Height */
+  --line-height-base: 1.5;
 }
 
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
-}
-
-/* Fix for iOS Safari viewport width (100vw issue) */
-@supports (-webkit-touch-callout: none) {
-  body {
-    width: 100%;
-    /* Ensure Safari doesn't consider the viewport scrollbar */
-  }
 }
 
 html,
 body {
-  background-color: var(--browser-background-color);
-  /* overscroll-behavior: none;  */
-  font-size: 16px;
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: var(--line-height-base);
   height: 100%;
   width: 100%;
-  overflow-x: hidden;
   margin: 0;
-  font-family: var(--font-family);
-  /* font-size: clamp(var(--font-size-body-min), 2.5vw, var(--font-size-body-max)); */
-  line-height: calc(var(--line-height-multiplier) * 1rem);
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
 }
@@ -95,210 +70,205 @@ body {
   flex: 1;
 }
 
-.page-wrapper {
-  margin-top: 0;
-  @media (min-width: 768px) {
-    margin-top: 0rem;
-  }
-}
-
-.slightBleedLayoutContainer {
-  margin-top: 0;
-  margin-bottom: 6rem;
-  @media (min-width: 768px) {
-    margin-top: 6rem;
-  }
-}
-
-.gridContainer {
-  margin: 6rem auto 0 auto;
-  max-width: 70%;
-}
-
-.contentContainer {
-  max-width: 90%;
-  margin: 0 auto;
-  position: relative;
-  overflow: visible;
-  /* border: 10px solid blue; */
-
-  @media (min-width: 768px) {
-    max-width: 55ch;
-    /* border: 10px solid blue; */
-  }
-}
-
-.infoPageH1 {
-  font-size: 3rem;
-  
-}
-
-.infoPageH2 {
- font-size: 2rem;
-}
-
-.infoPageH3 {
-  font-size: 1.5rem;
-
+/* Containers */
+.contentContainer,
+.gridContainer,
+.addContainerMargins {
+  width: 90%;
+  margin: 0 auto 6rem auto;
+  max-width: 70ch;
 }
 
 .noImgContentContainer {
-  max-width: 90%;
-  margin: 6rem auto;
-  position: relative;
-  overflow: visible;
-  /* border: 10px solid blue; */
-
-  @media (min-width: 768px) {
-    max-width: 55ch;
-    /* border: 10px solid blue; */
-  }
-}
-
-.cookieButtonContainer {
-  margin-bottom: 1rem;
-}
-
-/* LISTS */
-ul,
-ol {
-  padding-left: 1.2em;
-  /* Adjust the padding to control space for bullets or numbers */
-  /* list-style-position: inside; */
-  /* Makes the bullet or number sit inside the list item */
-  margin: 0;
-  /* Reset margin to prevent unnecessary spacing */
-}
-
-li {
-  display: list-item; /* Ensures list-item behavior */
-  font-size: 1rem;
-  line-height: 1.7;
-  color: var(--body-text-color);
-  /* margin: 0.50rem;  */
-  padding: 0; /* Reset padding for list items */
-}
-
-/* TYPOGRAPHY */
-p {
-  font-size: 1rem;
-  line-height: 1.7;
-  margin-bottom: 1.5rem;
-  color: var(--body-text-color);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-bottom: calc(var(--spacing-unit) * 2);
-  line-height: calc(
-    var(--line-height-multiplier) * 1rem
-  ); /* Default line-height */
-}
-
-h1 {
-  font-size: clamp(var(--font-size-h1-min), 6vw, var(--font-size-h1-max));
-  line-height: 1.2;
-  font-weight: var(--font-weight-medium);
-}
-
-h1.small {
-  font-size: 2.5rem;
-  font-weight: var(--font-weight-medium);
-  line-height: 1;
-}
-
-h2 {
-  font-size: clamp(var(--font-size-h2-min), 5vw, var(--font-size-h2-max));
-  line-height: 1.3;
-  font-weight: var(--font-weight-regular);
-}
-h2.small {
-  font-size: 1.5rem;
-}
-h2.producer {
-  font-size: 0.85rem;
-  margin-top: 0;
-  font-weight: var(--font-weight-medium);
-}
-
-h3 {
-  font-size: clamp(var(--font-size-h3-min), 4.5vw, var(--font-size-h3-max));
-  line-height: 1.4;
-  font-weight: var(--font-weight-regular);
-}
-
-.hero-heading {
-  font-size: clamp(var(--font-size-hero-min), 8vw, var(--font-size-hero-max));
-  line-height: 1.1;
-  text-align: center;
-  margin: 2rem auto;
-  width: 70%;
-  @media (min-width: 768px) {
-    margin: 2rem auto;
-    width: 50vw;
-  }
-}
-
-.summary {
-  font-size: clamp(
-    var(--font-size-summary-min),
-    2.5vw,
-    var(--font-size-summary-max)
-  );
-  color: rgb(87, 81, 81);
-  margin-bottom: 2rem;
-  line-height: 1.5;
-}
-
-/* LINKS */
-
-a {
-  color: #1e90ff;
-  text-decoration: underline;
-  font-size: 1rem;
-  line-height: 1.7;
-}
-
-a:hover {
-  color: #1e90ff;
-  text-decoration: none;
-}
-
-.no-padding {
-  padding: 0;
-  /* Use !important cautiously, as it overrides other styles */
-}
-
-.centered {
-  text-align: center;
-}
-
-.leftAlign {
-  text-align: left;
-}
-
-.bold {
-  font-weight: 500;
-}
-
-.no-margin {
-  margin: 0px;
-}
-
-/* Utility class to add to footer and other elmements when there is no container and lots of variegation in width  */
-.addContainerMargins {
   width: 90%;
+  margin: 6rem auto;
+  max-width: 70ch;
+}
+
+.slightBleedLayoutContainer {
+  margin: 6rem auto;
+}
+
+.slightBleedLayoutContainerNoImage {
   margin: 0 auto;
 }
 
-.marginXXL {
-  margin: 400px 0;
+/* Typography */
+h1,
+h2,
+h3 {
+  margin-bottom: var(--space-lg);
+  font-weight: var(--font-medium);
+  color: #1a1a1a;
 }
 
-.imageTest {
-  border: 10px solid yellow;
+h1 {
+  font-size: var(--font-size-h1);
+  line-height: 1.2;
+}
+h2 {
+  font-size: var(--font-size-h2);
+  line-height: 1.3;
+}
+h3 {
+  font-size: var(--font-size-h3);
+  line-height: 1.4;
+}
+
+.hero-heading {
+  font-size: var(--font-size-hero);
+  text-align: center;
+  max-width: 40ch;
+  margin: 2rem auto 1rem auto;
+}
+
+.infoHeroH1 {
+  font-size: var(--font-size-infohero);
+  text-align: center;
+  margin: 2rem auto 1rem auto;
+}
+
+.infoPageH1 {
+  font-size: var(--font-size-infoPage);
+}
+
+.summary,
+.summary p {
+  font-size: var(--font-size-summary);
+  margin: 1rem auto;
+  text-align: center;
+  max-width: 40ch;
+}
+
+.textMetadata hr {
+  color: #002b49;
+}
+
+.textMetadata {
+  color: #bb2511;
+}
+
+p,
+li,
+a {
+  font-size: var(--font-size-body);
+  line-height: 1.7;
+}
+
+p {
+  margin-bottom: var(--space-lg);
+}
+
+/* Links */
+a {
+  color: var(--link-color);
+  text-decoration: underline;
+  text-underline-offset: 4px; /* Improves readability */
+}
+a:hover {
+  text-decoration: var(--link-color);
+}
+
+/* Utility Classes */
+.centered {
+  text-align: center;
+}
+.leftAlign {
+  text-align: left;
+}
+.bold {
+  font-weight: var(--font-medium);
+}
+.no-margin {
+  margin: 0;
+}
+.no-padding {
+  padding: 0;
+}
+
+/* Lists */
+ul,
+ol {
+  padding-left: 1.2em;
+  margin: 0;
+}
+
+/* Code Blocks */
+code {
+  color: #333;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-family: Consolas, Monaco, monospace;
+}
+
+pre code {
+  display: block;
+  overflow: auto;
+  white-space: pre-wrap;
+  border: 1px solid var(--grey-light);
+  border-radius: 4px;
+}
+
+/* Fix for iOS Safari viewport width */
+@supports (-webkit-touch-callout: none) {
+  body {
+    width: 100%;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 768px) {
+  :root {
+    /* Mobile default heading sizes (8px increments) */
+    --font-size-h3: 1.75rem; /* 28px (optional increment) */
+    --font-size-h2: 2.5rem; /* 40px */
+    --font-size-h1: 1rem; /* 48px */
+    --font-size-hero: 3.5rem; /* 56 */
+    --font-size-infohero: 3.5rem;
+    --font-size-infohero: 3rem;
+    --font-size-summary: 1.25rem;
+  }
+  .contentContainer,
+  .gridContainer,
+  .addContainerMargins {
+    width: 80%;
+  }
+
+  .noImgContentContainer {
+    width: 90%;
+    margin: 6rem auto;
+    max-width: 70ch;
+  }
+
+  .slightBleedLayoutContainer {
+    margin: 6rem auto;
+  }
+
+  .slightBleedLayoutContainerNoImage {
+    margin: 6rem auto;
+  }
+
+  .hero-heading {
+    max-width: 20ch;
+    margin: 2rem auto 1rem auto;
+  }
+
+  .infoHeroH1 {
+    font-size: var(--font-size-infohero);
+    text-align: center;
+    margin: var(--space-xl) auto;
+    max-width: 20ch;
+    margin: 2rem auto 1rem auto;
+  }
+
+  .infoPageH1 {
+    font-size: var(--font-size-infohero);
+  }
+
+  .summary,
+  .summary p {
+    font-size: var(--font-size-summary);
+    max-width: 40ch;
+    margin: 1rem auto 2rem auto;
+  }
 }
